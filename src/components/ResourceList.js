@@ -5,9 +5,13 @@ const ResourceList = ({ resource }) => {
   const resources = useResources(resource);
 
   return (
-    <ul>
+    <ul className="ui bulleted list">
       {resources.map(record => {
-        return <li key={record.id}>{record.title}</li>;
+        return (
+          <li className="item" key={record.id}>
+            {record.title}
+          </li>
+        );
       })}
     </ul>
   );
